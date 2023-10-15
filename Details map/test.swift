@@ -11,98 +11,136 @@ struct test: View {
     var priceRange: String = "$$"
     
     var body: some View {
-        
-        VStack{
-            
-            ZStack {
-                Image("img3")
-                    .resizable()
-                    .frame(width: 400, height: 455.0)
-                    .cornerRadius(30)
-                    .ignoresSafeArea()
-                
-                Text("Karamvet")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .foregroundColor(.white)
-                    .offset(y: -140) //
-                
-            }
-            
-            Spacer()
-            
-            HStack {
-                VStack(alignment: .leading, spacing: 10) {
-                    Text("Karamvet")
-                        .font(.largeTitle)
-                        .fontWeight(.semibold)
-                        .foregroundColor(.pink)
-                        .padding()
-                    Text("☎️ 0537191761")
-                        .font(.title3)
-                        .fontWeight(.regular)
-                        .foregroundColor(.black)
-                        .padding()
-                        .offset(y: -45)
-                    Spacer()
-                    Text("⏰ Working Hours: ")
-                        .font(.body)
-                        .fontWeight(.regular)
-                        .foregroundColor(.black)
-                        .padding()
-                        .offset(y: -85)
-                    Text("       Sat ⎯⎯⎯ Thu")
-                        .font(.body)
-                        .fontWeight(.regular)
-                        .foregroundColor(.black)
-                        .padding()
-                        .offset(y: -130)
-                    Text("       10 AM - 10 PM")
-                        .font(.body)
-                        .fontWeight(.regular)
-                        .foregroundColor(.black)
-                        .padding()
-                        .offset(y: -175)
-                    Text("        FRIDAY    OFF")
-                        .font(.body)
-                        .fontWeight(.bold)
-                        .foregroundColor(.red)
-                        .padding()
-                        .offset(y: -218)
-                    
-                }
-                
-                Spacer()
-                
-                ZStack {
-                    starRate(rating: rating)
-                        .padding()
-                        .offset(y: -170)
-                    Text("500 SR - 1000 SR")
-                        .font(.body)
-                        .fontWeight(.bold)
-                        .foregroundColor(.green)
-                        .offset(y: -145)
-                    
-                }
-            }
+        ScrollView {
             
             VStack{
-                RoundedRectangle (cornerRadius: 25.0)
-                    .foregroundColor(.white)
-                    .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-                    .frame(width: 338 , height: 202)
-                    .offset(y: -200)
+                
+                ZStack {
+                    Image("img3")
+                        .resizable()
+                        .frame(width: 400, height: 455.0)
+                        .cornerRadius(30)
+                        .ignoresSafeArea()
+                        .offset(y: -60)
+                    
+                    Text("Karamvet")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                        .offset(y: -190)
+                    
+                }
+                
                 Spacer()
-                RoundedRectangle (cornerRadius: 25.0)
-                    .foregroundColor(.white)
-                    .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-                    .frame(width: 338 , height: 202)
-                    .offset(y: -200)
+                
+                HStack {
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text("Karamvet")
+                            .font(.largeTitle)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.pink)
+                            .padding()
+                            .offset(y: -60)
+                        Text("☎️ 0537191761")
+                            .font(.title3)
+                            .fontWeight(.regular)
+                            .foregroundColor(.black)
+                            .padding()
+                            .offset(y: -95)
+                        Spacer()
+                        Text("⏰ Working Hours: ")
+                            .font(.body)
+                            .fontWeight(.regular)
+                            .foregroundColor(.black)
+                            .padding()
+                            .offset(y: -150)
+                        Text("       Sat ⎯⎯⎯ Thu")
+                            .font(.body)
+                            .fontWeight(.regular)
+                            .foregroundColor(.black)
+                            .padding()
+                            .offset(y: -190)
+                        Text("       10 AM - 10 PM")
+                            .font(.body)
+                            .fontWeight(.regular)
+                            .foregroundColor(.black)
+                            .padding()
+                            .offset(y: -230)
+                        Text("        FRIDAY    OFF")
+                            .font(.body)
+                            .fontWeight(.bold)
+                            .foregroundColor(.red)
+                            .padding()
+                            .offset(y: -270)
+                        
+                    }
+                    
+                    Spacer()
+                    
+                    ZStack {
+                        starRate(rating: rating)
+                            .padding()
+                            .offset(y: -50)
+                        Text("500 SR - 1000 SR")
+                            .font(.body)
+                            .fontWeight(.bold)
+                            .foregroundColor(.green)
+                            .offset(y: -205)
+                        
+                    }
+                }
+                
+                VStack{
+                    ZStack{
+                        
+                        RoundedRectangle(cornerRadius: 26)
+                            .frame(width: 338, height: 202)
+                            .foregroundColor(Color.white)
+                            .shadow(color: Color.gray.opacity(0.5), radius: 4, x: 0, y: 4)
+                            .position(x: 197, y: -190)
+                        
+                        Text("SERVICE WE OFFER")
+                            .font(.custom("SF Pro", size: 20))
+                            .position(x: 197, y: -250)
+                            .padding()
+                        Text("✔︎ Surgeries")
+                            .font(.custom("SF Pro", size: 17))
+                            .position(x: 90, y: -210)
+                            .padding()
+                        Text("✔︎ Treatments")
+                            .font(.custom("SF Pro", size: 17))
+                            .position(x: 90, y: -190)
+                            .padding()
+                        Text("✔︎   Vaccines")
+                            .font(.custom("SF Pro", size: 17))
+                            .position(x: 90, y: -170)
+                            .padding()
+                        Text("✔︎ Detection")
+                            .font(.custom("SF Pro", size: 17))
+                            .position(x:270, y: -210)
+                            .padding()
+                        Text("✔︎ Showers")
+                            .font(.custom("SF Pro", size: 17))
+                            .position(x: 270, y: -190)
+                            .padding()
+
+                        Text("✔︎ Nail cut")
+                            .font(.custom("SF Pro", size: 18))
+                            .position(x:270, y: -170)
+                            .padding()
+                        
+                    }
+                    
+                   
+                    }
+                    Spacer()
+                    
+                   
+                }
             }
         }
-    }
-    }
+}
     struct starRate: View {
         var rating: Double
         
@@ -129,3 +167,6 @@ struct test: View {
         }
         
     }
+#Preview(){
+    test()
+}
