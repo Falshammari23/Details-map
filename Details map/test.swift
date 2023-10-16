@@ -137,53 +137,41 @@ struct test: View {
                     
                         ZStack{
                             
-                            RoundedRectangle(cornerRadius: 26)
-                                .frame(width: 330, height: 202)
-                                .foregroundColor(Color.white)
-                                .shadow(color: Color.gray.opacity(0.5), radius: 4, x: 0, y: 4)
-                                .position(x: 199, y: -130)
-                            
-                            Text("Waeel Ahmed")
-                                .font(.custom("SF Pro", size: 28))
-                                .position(x:120, y: -200)
-                                .padding()
-                            Text("Experiens:")
-                                .font(.custom("SF Pro", size: 22))
-                                .position(x:90, y: -160)
-                                .padding()
-                            Text("+15 Years in Pet treatment:")
-                                .font(.custom("SF Pro", size: 17))
-                                .position(x:120, y: -135)
-                                .padding()
-                            
-                
-                            
-                     
-                                .padding()
-                            
-                            
                             RoundedRectangle(cornerRadius: 10)
-                                .frame(width: 210, height: 40)
+                                .frame(width: 210, height: 80)
                                 .foregroundColor(Color.pink)
                                 .shadow(color: Color.gray.opacity(0.5), radius: 4, x: 0, y: 4)
-                                .position(x: 205, y: -240)
+                                .position(x: 205, y: -210)
                             
                             Text("Doctors Card")
                                 .fontWeight(.bold )
                                 .foregroundColor(.white)
                             
                                 .font(.custom("SF Pro", size: 28))
-                                .position(x: 190, y: -256)
+                                .position(x: 190, y: -245)
                                 .padding()
                             
                             
+                            RoundedRectangle(cornerRadius: 26)
+                                .frame(width: 330, height: 150)
+                                .foregroundColor(Color.white)
+                                .shadow(color: Color.gray.opacity(0.5), radius: 4, x: 0, y: 4)
+                                .position(x: 199, y: -130)
                             
-                            
+                            Text("Waeel Ahmed")
+                                .font(.custom("SF Pro", size: 28))
+                                .position(x:120, y: -170)
+                                .padding()
+                            Text("Experiens:")
+                                .font(.custom("SF Pro", size: 22))
+                                .position(x:90, y: -130)
+                                .padding()
+                            Text("        +15 Years in Pet treatment:")
+                                .font(.custom("SF Pro", size: 17))
+                                .position(x:120, y: -105)
+                                .padding()
                         }
                         
-                    
-                    
-                    
                     Spacer()
                     
                 }
